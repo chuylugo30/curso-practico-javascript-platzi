@@ -17,6 +17,7 @@
             --hospital-green: #ACD9B2;
             --small-letter: 14px;
             --middle-letter:16px;
+            --inter-middle-letter:18px;
             --large-letter:24px;
         }
 
@@ -46,13 +47,44 @@
             text-align: center;
         }
         .subtitle-2 {
-            font-size: var(--large-letter);
+            font-size: var(--inter-middle-letter);
             text-align: center;
         }
 
         form {
             display: flex;
             flex-direction: column;
+        }
+
+        label {
+            font-size: var(--small-letter);
+            font-weight: normal;
+            margin-bottom: 4px;
+        }
+
+        .input {
+            background-color: var(--text-input-field);
+            border: 1px solid var(--black);
+            border-radius: 8px;
+            padding: 6px;
+            height: 32px;
+            font-size: var(--middle-letter);
+            margin-bottom: 16px;
+        }
+
+        button {
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            height: 30px;
+            color: var(--while);
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: green;
         }
     </style>
 </head>
@@ -66,10 +98,39 @@
                 <label for="ladoCuadrado">
                     Cuanto miden los lados del cuadrado
                 </label>
-                <input id="ladoCuadrado" type="number">
+                <input id="ladoCuadrado" type="number" class="input">
                 <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
                 <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
-    
+            </form>
+
+            <h2 class="subtitle-2">Calcula el área y perímetro de un triangulo</h2>
+            <form action="/"> 
+                <label for="ladoTriangulo1">
+                    Ingresa lado 1 del triangulo
+                </label>
+                <input id="ladoTriangulo1" type="number" class="input">
+
+                <label for="ladoTriangulo2">
+                    Ingresa lado 2 del triangulo
+                </label>
+                <input id="ladoTriangulo2" type="number" class="input">
+
+                <label for="ladoBase">
+                    Ingresa base del triangulo
+                </label>
+                <input id="ladoBase" type="number" class="input">
+
+                <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
+                <label for="valorBase">
+                    Ingresa la base
+                </label>
+                <input id="valorBase" type="number" class="input">
+                <label for="valorAltura">
+                    Ingresa la altura
+                </label>
+                <input id="valorAltura" type="number" class="input">
+
+                <button type="buttonBase" onclick="calcularAreaTriangulo()">Calcular el área</button>
             </form>
         </div>
     </div>

@@ -1,6 +1,5 @@
 //Código de cuadrado
 console.group("Cuadrados") // Nos permite agrupar un grupo de console.log
-
 function perimetroDelCuadrado (lado) {
    return lado * 4;
 } 
@@ -8,32 +7,26 @@ function perimetroDelCuadrado (lado) {
 function areaCuadrado (lado) {
     return lado * lado;
 } 
-
 console.groupEnd(); // y este nos permite terminar esta agrupacion de console.log
 
 // Código del triangulo
 console.group("triangulo");
 
-function perimetroTriangulo (ladoTriangulo1 ,ladoTriangulo2, baseTriangulo) {
-    return ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
+function perimetroTriangulo (lado1 ,lado2, ladoBse) {
+    return (lado1 + lado2 + ladoBse);
 }
  function areaTriangulo (ladoBase,alturaTriangulo) {
      return (ladoBase * alturaTriangulo) / 2
  }
-
  console.groupEnd();
 
  // Código del circulo
  console.group("Circulo");
 
  //Radio
- //const radioCirculo = 4; // le colocamos la medida que queramos
-
  function radioCirculo(radio) {
      return radio;
  }
-
- //console.log(`El radio del circulo es: ${radioCirculo}cm`);
  //Diametro
  //const diametroCirculo = radioCirculo * 2;
  function diametroCirculo (radio) {
@@ -68,4 +61,29 @@ function perimetroTriangulo (ladoTriangulo1 ,ladoTriangulo2, baseTriangulo) {
       const inputValue = input.value;
       const area = areaCuadrado(inputValue);
       alert(area);  
+  }
+
+  function calcularPerimetroTriangulo () {
+      const inputTriangulo1 = document.getElementById("ladoTriangulo1");
+      const inputTriangulo2 = document.getElementById("ladoTriangulo2");
+      const inputBase = document.getElementById("ladoBase");
+      const inputValue1 = inputTriangulo1.value;
+      const inputValue2 = inputTriangulo2.value;
+      const inputValue3 = inputBase.value;
+      const parseInput1 = parseInt(inputValue1);
+      const parseInput2 = parseInt(inputValue2);
+      const parseInput3 = parseInt(inputValue3);
+      //console.log("esto trae",typeof parseInput1,typeof parseInput2,typeof parseInput3);
+      const perimetro = perimetroTriangulo(parseInput1,parseInput2,parseInput3);
+      alert(perimetro);
+  }
+
+  function calcularAreaTriangulo () {
+      const base = document.getElementById("valorBase");
+      const altura = document.getElementById("valorAltura");
+      const inputBase = base.value;
+      const inputAltura = altura.value;
+      const area = areaTriangulo(inputBase,inputAltura);
+      alert(area);
+
   }
