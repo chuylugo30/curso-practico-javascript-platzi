@@ -53,3 +53,19 @@ function perimetroTriangulo (ladoTriangulo1 ,ladoTriangulo2, baseTriangulo) {
      return (radioCirculo * radioCirculo) * Math.PI;
  }
   console.groupEnd();
+
+  // Aquí interactuamos con el HTML
+
+  function calcularPerimetroCuadrado () {
+     const input = document.getElementById("ladoCuadrado");
+     const inputValue = input.value; // Este value nos sirve para obtener el valor que escribieron los usuarios en el input
+     const perimetro = perimetroDelCuadrado(inputValue); // dentro de una constante llamamos la funcion que calcula el perimetro de cuadrado y le pasamos como argumento el valor del input
+     alert(perimetro);
+  }
+
+  function calcularAreaCuadrado () {
+      const input = document.getElementById("ladoCuadrado");
+      const inputValue = input.value;
+      const area = areaCuadrado(inputValue);
+      alert(area);  
+  }
