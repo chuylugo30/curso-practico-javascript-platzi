@@ -28,7 +28,6 @@ function perimetroTriangulo (lado1 ,lado2, ladoBse) {
      return radio;
  }
  //Diametro
- //const diametroCirculo = radioCirculo * 2;
  function diametroCirculo (radio) {
      return radio * 2;
  }
@@ -46,7 +45,6 @@ function perimetroTriangulo (lado1 ,lado2, ladoBse) {
      return (radioCirculo * radioCirculo) * Math.PI;
  }
   console.groupEnd();
-
   // Aquí interactuamos con el HTML
 
   function calcularPerimetroCuadrado () {
@@ -73,7 +71,6 @@ function perimetroTriangulo (lado1 ,lado2, ladoBse) {
       const parseInput1 = parseInt(inputValue1);
       const parseInput2 = parseInt(inputValue2);
       const parseInput3 = parseInt(inputValue3);
-      //console.log("esto trae",typeof parseInput1,typeof parseInput2,typeof parseInput3);
       const perimetro = perimetroTriangulo(parseInput1,parseInput2,parseInput3);
       alert(perimetro);
   }
@@ -85,5 +82,18 @@ function perimetroTriangulo (lado1 ,lado2, ladoBse) {
       const inputAltura = altura.value;
       const area = areaTriangulo(inputBase,inputAltura);
       alert(area);
+  }
 
+  function calcularPerimetroCirculo () {
+      const valorCirculo = document.getElementById("valorCirculo");
+      const inputCirculo = valorCirculo.value;
+      const perimetro = perimetroCirculo(inputCirculo);
+      alert(perimetro);
+  }
+
+  function calcularAreaCir() {
+     const valorCirculo = document.getElementById("valorCirculo");
+     const inputCirculo = valorCirculo.value;
+     const area = areaCirculo(inputCirculo);
+     alert(area);
   }

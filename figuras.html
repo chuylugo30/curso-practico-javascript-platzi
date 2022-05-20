@@ -24,6 +24,7 @@
         body {
             margin: 0;
             font-family: 'Quicksand', sans-serif;
+            background-color: papayawhip;
         }
         .figuras-geometricas {
             width: 100%;
@@ -44,6 +45,7 @@
 
         .subtitle {
             font-size: var(--middle-letter);
+            color: var(--very-light-pink);
             text-align: center;
         }
         .subtitle-2 {
@@ -84,7 +86,7 @@
         }
 
         button:hover {
-            background-color: green;
+            background-color: red;
         }
     </style>
 </head>
@@ -131,6 +133,16 @@
                 <input id="valorAltura" type="number" class="input">
 
                 <button type="buttonBase" onclick="calcularAreaTriangulo()">Calcular el área</button>
+            </form>
+
+            <h2 class="subtitle-2">Calcula el área y perímetro de un circulo</h2>
+            <form action="/"> 
+                <label for="valorCirculo">
+                    Ingresa el valor
+                </label>
+                <input id="valorCirculo" type="number" class="input">
+                <button type="buttonBase" onclick="calcularPerimetroCirculo()">Calcular perimetro</button>
+                <button type="buttonBase" onclick="calcularAreaCir()">Calcular circulo</button>
             </form>
         </div>
     </div>
