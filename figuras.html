@@ -85,6 +85,10 @@
             font-weight: bold;
         }
 
+        .resultado {
+            text-align: center;
+        }
+
         button:hover {
             background-color: red;
         }
@@ -100,9 +104,10 @@
                 <label for="ladoCuadrado">
                     Cuanto miden los lados del cuadrado
                 </label>
-                <input id="ladoCuadrado" type="number" class="input">
+                <input id="ladoCuadrado" type="number" class="input" onfocus="this.value='' ">
                 <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
                 <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                <h4 id="resultado" class="resultado">0</h6>
             </form>
 
             <h2 class="subtitle-2">Calcula el área y perímetro de un triangulo</h2>
@@ -110,29 +115,31 @@
                 <label for="ladoTriangulo1">
                     Ingresa lado 1 del triangulo
                 </label>
-                <input id="ladoTriangulo1" type="number" class="input">
+                <input id="ladoTriangulo1" type="number" class="input" onfocus="this.value='' ">
 
                 <label for="ladoTriangulo2">
                     Ingresa lado 2 del triangulo
                 </label>
-                <input id="ladoTriangulo2" type="number" class="input">
+                <input id="ladoTriangulo2" type="number" class="input" onfocus="this.value='' ">
 
                 <label for="ladoBase">
                     Ingresa base del triangulo
                 </label>
-                <input id="ladoBase" type="number" class="input">
+                <input id="ladoBase" type="number" class="input" onfocus="this.value='' ">
 
                 <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
+                <h4 id="resultadoTriangulo" class="resultado">0</h4>
                 <label for="valorBase">
                     Ingresa la base
                 </label>
-                <input id="valorBase" type="number" class="input">
+                <input id="valorBase" type="number" class="input" onfocus="this.value='' ">
                 <label for="valorAltura">
                     Ingresa la altura
                 </label>
-                <input id="valorAltura" type="number" class="input">
+                <input id="valorAltura" type="number" class="input" onfocus="this.value='' ">
 
-                <button type="buttonBase" onclick="calcularAreaTriangulo()">Calcular el área</button>
+                <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
+                <h4 id="resutadoAreaTriangulo" class="resultado">0</h4>
             </form>
 
             <h2 class="subtitle-2">Calcula el área y perímetro de un circulo</h2>
@@ -140,9 +147,10 @@
                 <label for="valorCirculo">
                     Ingresa el valor
                 </label>
-                <input id="valorCirculo" type="number" class="input">
-                <button type="buttonBase" onclick="calcularPerimetroCirculo()">Calcular perimetro</button>
-                <button type="buttonBase" onclick="calcularAreaCir()">Calcular circulo</button>
+                <input id="valorCirculo" type="number" class="input" onfocus="this.value='' ">
+                <button type="button" onclick="calcularPerimetroCirculo()">Calcular perimetro</button>
+                <button type="button" onclick="calcularAreaCir()">Calcular circulo</button>
+                <h4 id="resultadoCirculo" class="resultado">0</h4>
             </form>
         </div>
     </div>
