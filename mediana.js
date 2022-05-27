@@ -10,7 +10,7 @@ const listaDesordenada = [
     2,4,9,1,8,5
 ];
 
-const listaOrdenada = listaDesordenada.sort(function(a,b){return a - b}) // Sin embargo cuando utilizamos un sort para ordenar un array de numbers se necesita crear una función que ayude ha generar el orden de la clasificacion de los elementos
+const listaOrdenadaNumero = listaDesordenada.sort(function(a,b){return a - b}) // Sin embargo cuando utilizamos un sort para ordenar un array de numbers se necesita crear una función que ayude ha generar el orden de la clasificacion de los elementos
 
 const jugadores = ['Ronaldo','messi','kaka','Arbeola','Mbappe','Bebeto','Cesh Fabregas','Neymar'];
 const listaOrdenada = jugadores.sort(); // este método nos permite ordenar nuestro elementos dentro de array de forma ascendente
